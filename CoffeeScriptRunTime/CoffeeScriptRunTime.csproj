@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4263B0C1-797A-4B11-BE6B-EA63856AA8D4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoffeeScriptRunTime</RootNamespace>
+    <AssemblyName>CoffeeScriptRunTime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicSugar">
+      <HintPath>..\packages\DynamicSugar.0.1.10.0\lib\DynamicSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="Jurassic, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JavaScript.RunTimes\Jurassic 2.1\Jurassic.dll</HintPath>
+    </Reference>
+    <Reference Include="Noesis.Javascript">
+      <HintPath>..\JavaScript.RunTimes\Noesis.Javascript v0.3.1 - Binaries for .NET4.0\Noesis.Javascript.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicJavaScriptRunTimes.csproj">
+      <Project>{81CFDE6E-FE2D-4FEB-A53B-AB00E9C6A9C2}</Project>
+      <Name>DynamicJavaScriptRunTimes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JavaScript\coffee-script.v1.1.1.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JavaScript\Runner.js" />
+    <EmbeddedResource Include="JavaScript\RunTimeHelper.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CoffeeScripts\array.coffee" />
+    <None Include="CoffeeScripts\array.demo.coffee" />
+    <None Include="CoffeeScripts\c.coffee" />
+    <None Include="CoffeeScripts\class.demo.coffee" />
+    <None Include="CoffeeScripts\demo.coffee" />
+    <None Include="CoffeeScripts\do.coffee" />
+    <None Include="CoffeeScripts\for.demo.coffee" />
+    <None Include="CoffeeScripts\if.coffee" />
+    <None Include="CoffeeScripts\LC.coffee" />
+    <None Include="CoffeeScripts\MultiValues.coffee" />
+    <None Include="CoffeeScripts\ObjectAndArray.coffee" />
+    <None Include="CoffeeScripts\ObjectLiteral.coffee" />
+    <None Include="CoffeeScripts\overview.coffee" />
+    <None Include="CoffeeScripts\splat.coffee" />
+    <None Include="CoffeeScripts\StringProcessing.coffee" />
+    <None Include="SyntaxHighLighter\CoffeeScript.chl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CoffeeScripts\overview.coffee.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

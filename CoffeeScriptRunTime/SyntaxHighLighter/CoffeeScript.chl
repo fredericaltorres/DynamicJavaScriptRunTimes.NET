@@ -1,0 +1,59 @@
+//////////////////////////////////////////////////////////////////////////////
+/// CoffeeScript Highlighter 
+/// Torres Frederic
+/// www.FredericTorres.net
+//////////////////////////////////////////////////////////////////////////////
+
+Language:               CoffeeScript
+Filter:                 CoffeeScript files (*.coffee)|*.coffee
+HelpFile:
+CaseSensitive:          1
+LineComment:            #
+BlockCommentBeg:
+BlockCommentEnd:
+IdentifierBegChars:     a..z A..Z _
+IdentifierChars:        a..z A..Z _1234567890
+NumConstBegChars:       ()[]{}
+NumConstChars:          0..9 @ $
+EscapeChar:             \
+
+KeyWords1:              this new delete typeof in instanceof return throw break constructor
+                        continue debugger if else switch for while do try catch finally class extends super
+                        unless until loop of by when then
+
+// This are special variables
+KeyWords2:              @ $ $@ $& $` $' $+ $1, $2.. $~ $= $/ $\ $, $; $. $< $> $_ $0 $* $$ $?
+                        $: $" $DEBUG $FILENAME $LOAD_PATH $stdin $stdout $stderr $VERBOSE option $-0
+                        $-a $-d $-F $-i $-I $-l $-p $-v
+                        true false null
+
+// This are classes, modules and methods
+KeyWords3:              && || & * + - = == | : ->
+                        undefined and or is isnt not yes no on off
+
+StringBegChar:          " '
+StringEndChar:          " '
+MultilineStrings:       0
+UsePreprocessor:        0
+CurrLineHighlighted:    0
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            $006798FD clWindow B
+Keyword2Col:            clBlue clWindow
+Keyword3Col:            clMaroon clWindow B
+IdentifierCol:          $009C4321 clWindow
+CommentCol:             $00B0B0B0 clWindow I
+NumberCol:              clTeal clWindow B
+StringCol:              $00449612 clWindow
+SymbolCol:              $004040FF clWindow
+PreprocessorCol:        clBlue clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack clYellow
+
+OverrideTxtFgColor:     0
+BlockAutoindent:        0
+BlockBegStr:
+BlockEndStr:
+Keyword4Col:            clWindowText clWindow
+Keyword5Col:            clWindowText clWindow
+MatchedBracesCol:       clWindowText clWindow
