@@ -24,18 +24,13 @@ You may use DynamicJavaScriptRunTimes.NET under the terms of the MIT License.
 
 ##Source Code:
 
-<https://github.com/fredericaltorres/[PRODUCT-NAME]>
+<https://github.com/fredericaltorres/DynamicJavaScriptRunTimes.NET>
 
 ## History
 
 	Date        Version Features/Bug Fixes
 	--------------------------------------------------------------------
-	2011-06-24  0.0.1   First release to github
+	2011-06-29  0.0.1   First release to github
 
 
 
-DynamicJavaScriptRunTimes.NET is a layer above, the Noesis JavaScript.NET run-time
-and the Jurassic JavaScript run-time that provide access to the JavaScript Objects 
-and Arrays in a dynamic way for C# application.
-
-DynamicJavaScriptRunTimes.NET also provide a CoffeeScript compiler and run-time.
