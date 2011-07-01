@@ -7,8 +7,7 @@ Next steps:
   mkdir DynamicJavaScriptRunTimes.NET
   cd DynamicJavaScriptRunTimes.NET
   git init
-  touch README
-  git add README
+ git add .
   git commit -m 'first commit'
   git remote add origin git@github.com:fredericaltorres/DynamicJavaScriptRunTimes.NET.git
   git push -u origin master

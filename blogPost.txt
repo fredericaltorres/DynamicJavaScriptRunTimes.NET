@@ -1,0 +1,244 @@
+
+The&nbsp;<a href="http://javascriptdotnet.codeplex.com/">Noesis JavaScript.NET</a> run-time is probably the fastest run-time that you can use from C# on Windows so far. The reason why, it uses Google V8 2.2 engine from 09/2010 (remark:this project seems to have been&nbsp;abandoned by its author :&lt;)&nbsp;.
+
+The <a href="http://jurassic.codeplex.com/">Jurassic JavaScript </a>run time is not as fast, but because written in C# provides better integration with the .NET world, if you really need it.
+
+<i><b>But both run-times do not let you access JavaScript objects and arrays in the C# world using the dynamic syntax available in JavaScript.
+</b></i>
+Here is a sample from the Noesis codeplex web site
+<pre class="brush: javascript;">JavascriptContext context = new JavascriptContext();
+
+context.SetParameter("console", new SystemConsole());
+context.SetParameter("message", "Hello World !");
+context.SetParameter("number", 1);
+
+string script = @"
+    var i;
+    for (i = 0; i &lt; 5; i++)
+        console.Print(message + ' (' + i + ')');
+    number += i;
+";
+
+context.Run(script);
+
+Console.WriteLine("number: " + context.GetParameter("number"));
+</pre>
+
+Using the dynamic feature of C# 4.0 and my library <a href="http://github.com/fredericaltorres/DynamicJavaScriptRunTimes.NET">DynamicJavaScriptRunTimes.net</a>, &nbsp;You can write the same code this way
+<pre class="brush: javascript;">dynamic jsContext = new DynamicJavascriptContext(
+                          new JavascriptContext()
+                    );                                               
+jsContext.message = "Hello World !";
+jsContext.number = 1;
+
+string script = @"
+    var i = 0;
+    for (i = 0; i &lt; 5; i++)
+        console.log(message + ' (' + i + ')');
+    number += i;
+";
+
+jsContext.Run(script);
+
+Console.WriteLine("number: " + jsContext.number);
+
+</pre>
+
+JavaScript array are translated into &nbsp;.NET array and JavaScript object are translated into .NET Dictonary&lt;string, object&gt;. The method jsContext.Array() is a helper to create an array in a JavaScript like syntax, inspired by <a href="http://www.dynamicsugar.net/">DynamicSugar.Net</a>.
+
+<b>array:</b>
+How to create an array in C#, modify it in JavaScript and then read it back in C#.
+<pre class="brush: javascript;">dynamic jsContext   = new DynamicJavascriptContext(
+                           new JavascriptContext()
+                      );
+jsContext.a = new object [] { 1, 2, 3 };  // Regular Syntax
+jsContext.a = jsContext.Array( 1, 2, 3 ); // My Syntax
+
+string script = @"
+    a.push(4);
+";
+            
+jsContext.Run(script);
+
+Assert.AreEqual(4, jsContext.a.Length);
+
+for(var i=0; i &lt; jsContext.a.Length; i++)
+    Assert.AreEqual(i+1, jsContext.a[i]);
+
+</pre>
+
+<b>Objects:</b>
+As you can see nested objects and arrays are supported. The [ ] syntax to access a property is also supported.
+<pre class="brush: javascript;">dynamic jsContext = new DynamicJavascriptContext(
+                          new JavascriptContext()
+                    );
+string script = @"
+    Configuration =  {
+        Server   :    'TOTO',
+        Database :    'Rene', 
+        Debug    :    true, 
+        MaxUser  :    3, 
+        Users    :    [
+            { UserName:'rdescartes'    ,FirstName:'rene'      ,LastName:'descartes'     }, 
+            { UserName:'bpascal'       ,FirstName:'blaise'    ,LastName:'pascal'        }, 
+            { UserName:'cmontesquieu'  ,FirstName:'charles'   ,LastName:'montesquieu'   } 
+        ]
+    }
+";
+
+jsContext.Run(script);
+
+Assert.AreEqual("TOTO"      , jsContext.Configuration.Server);
+Assert.AreEqual("Rene"      , jsContext.Configuration.Database);
+Assert.AreEqual(true        , jsContext.Configuration.Debug);
+Assert.AreEqual(3           , jsContext.Configuration.MaxUser);
+Assert.AreEqual(3           , jsContext.Configuration.Users.Length);
+Assert.AreEqual("rdescartes", jsContext.Configuration.Users[0].UserName);
+
+Assert.AreEqual("TOTO"      , jsContext["Configuration"]["Server"]);
+Assert.AreEqual("Rene"      , jsContext["Configuration"]["Database"]);
+Assert.AreEqual(true        , jsContext["Configuration"]["Debug"]);
+Assert.AreEqual(3           , jsContext["Configuration"]["MaxUser"]);
+Assert.AreEqual(3           , jsContext["Configuration"]["Users"].Length);
+Assert.AreEqual("rdescartes", jsContext["Configuration"]["Users"][0].UserName);
+
+</pre>
+
+<b>More Objects</b>
+We can also create objects from C#, pass them to the JavaScript run-time and then access the objects again. The method jsContext.Object() is a helper method inspired by <a href="http://www.dynamicsugar.net/">DynamicSugar.Net</a> to create object in a JavaScript like syntax or pass a POCO. 
+
+<b>Note</b>: Objects and arrays are not passed by reference. The data is copied from one world to the other.
+
+<pre class="brush: javascript;">dynamic jsContext   = new DynamicJavascriptContext(
+                            new JavascriptContext()
+                      );
+                      
+jsContext.i = jsContext.Object(
+    new {
+        a = jsContext.Object( new { LastName="Torres", Age=46 } ),
+        b = jsContext.Object( new Person("Ferry", 47) ),
+    }
+);
+string script = @"
+    var p1 = {
+        Name : i.a.LastName,
+        Age  : i.a.Age
+    }
+    var p2 = {
+        Name : i.b.LastName,
+        Age  : i.b.Age
+    }
+";
+
+jsContext.Run(script);
+
+Assert.AreEqual("Torres", jsContext.p1.Name);
+Assert.AreEqual("Torres", jsContext.p1["Name"]);
+Assert.AreEqual("Torres", jsContext["p1"]["Name"]);
+
+Assert.AreEqual(46, jsContext.p1.Age);
+Assert.AreEqual(46, jsContext.p1["Age"]);
+Assert.AreEqual(46, jsContext["p1"]["Age"]);
+
+Assert.AreEqual("Ferry", jsContext.p2.Name);
+Assert.AreEqual("Ferry", jsContext.p2["Name"]);
+Assert.AreEqual("Ferry", jsContext["p2"]["Name"]);
+
+Assert.AreEqual(47, jsContext.p2.Age);
+Assert.AreEqual(47, jsContext.p2["Age"]);
+Assert.AreEqual(47, jsContext["p2"]["Age"]);            
+</pre>
+
+<b>More Samples</b>
+<pre class="brush: javascript;">Assert.AreEqual(
+    "Fred",
+    jsContext.Run(@"
+        function Person(firstName){ this.FirstName = firstName; }
+        (new Person('Fred'))"
+    ).FirstName
+);
+
+////////////////////////////////////////////
+
+DateTime refDate = new DateTime(1964, 12, 11, 01, 02, 03);
+
+string script = @"
+    var O2 = {
+                F2: function(pInt,pDouble,pString,pBool,pDate) { 
+                        return ''+this.Internal+'-'+pInt+'-'+pDouble+'-'+pString+'-'+pBool+'-'+formatDateUS(pDate);
+                },
+                Internal:1
+                }
+";
+
+jsContext.Load("format", Assembly.GetExecutingAssembly());
+
+jsContext.Run(script);
+
+var expectedF2 = "1-1-123.456-hello-true-12/11/1964 1:2:3";
+var f2Result   = jsContext.Call("O2.F2", 1, 123.456, "hello", true, refDate);
+
+Assert.AreEqual(expectedF2, f2Result);
+
+</pre>
+
+
+<b>The DynamicJavascriptContext class</b>
+<pre class="brush: javascript;">/// &lt;summary&gt;
+/// Run the script and return the last value evaluated. Executing a declaration function
+/// or a global object literal, will load the function or object in the JavaScript context.
+/// &lt;/summary&gt;
+/// &lt;param name="script"&gt;&lt;/param&gt;
+/// &lt;returns&gt;
+/// &lt;/returns&gt;
+public object Run(string script);
+
+/// &lt;summary&gt;
+/// Load a JavaScript text file or text ressource in the JavaScript context
+/// &lt;/summary&gt;
+/// &lt;param name="name"&gt;The name without the .js extension&lt;/param&gt;
+/// &lt;param name="assembly"&gt;The assembly is loading a ressource&lt;/param&gt;
+public void Load(string name, Assembly assembly = null);
+
+/// &lt;summary&gt;
+/// Execute a javascript global function or method
+/// &lt;/summary&gt;
+/// &lt;param name="functionName"&gt;the function name&lt;/param&gt;
+/// &lt;param name="parameters"&gt;The parameters&lt;/param&gt;
+/// &lt;returns&gt;&lt;/returns&gt;
+public object Call(string functionName, params object[] parameters);
+
+/// &lt;summary&gt;
+/// Helper function to make date compatible with the JavaScript
+/// run time. Jurassic date are not .net datetime and need a convertion
+/// &lt;/summary&gt;
+/// &lt;param name="o"&gt;&lt;/param&gt;
+/// &lt;returns&gt;&lt;/returns&gt;
+public object Date(DateTime d){);
+
+/// &lt;summary&gt;
+/// Helper function to make array compatible with the JavaScript run time.
+/// &lt;/summary&gt;
+/// &lt;param name="array"&gt;&lt;/param&gt;
+/// &lt;returns&gt;&lt;/returns&gt;
+public object array(params object [] array);
+
+/// &lt;summary&gt;
+/// Helper function to make a JavaScript object compatible with the JavaScript run-time
+/// &lt;/summary&gt;
+/// &lt;param name="netObject"&gt;&lt;/param&gt;
+/// &lt;returns&gt;&lt;/returns&gt;
+public object Object(object netObject);
+
+
+</pre>
+
+<span class="Apple-style-span" style="font-size: large;">Conclusion</span>
+<hr />
+<a href="http://github.com/fredericaltorres/DynamicJavaScriptRunTimes.NET">DynamicJavaScriptRunTimes.net</a>
+<ul>
+<li>Add a nice syntatic sugar layer to execute JavaScript code from C#</li>
+<li>Support 2 JavaScript run-times: Noesis and Jurassic</li>
+<li>Part of the source code is a <a href="http://frederictorres.blogspot.com/2011/06/editing-and-running-coffeescript-on.html">CoffeeScript v 1.1.1 compiler and run-time.</a></li>
+<li>Available on github</li>
+</ul>

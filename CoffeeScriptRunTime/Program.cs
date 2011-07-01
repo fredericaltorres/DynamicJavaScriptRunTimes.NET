@@ -78,6 +78,11 @@ namespace CoffeeScriptRunTime {
             if (coffeeScriptCode.Contains(DisplayJavaScriptTag)) 
                 _displayJavaScriptFromCoffeeScript = true;
             coffeeScriptCode = coffeeScriptCode.Replace(Environment.NewLine, "\\n");
+            // For the f*@#... mac and linux users
+            coffeeScriptCode = coffeeScriptCode.Replace(Environment.NewLine[0].ToString(), "\\n");
+            coffeeScriptCode = coffeeScriptCode.Replace(Environment.NewLine[1].ToString(), "\\n");
+
+            coffeeScriptCode = coffeeScriptCode.Replace("'",@"\'");
             return coffeeScriptCode;
         }
         public void DisplayLogo(bool displayLogo) {

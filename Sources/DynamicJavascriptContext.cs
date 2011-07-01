@@ -15,35 +15,24 @@ namespace DynamicJavaScriptRunTimes {
 
         IDynamicJavaScriptContext _javaScriptContextImplementation;
 
-        //public Dictionary<string, string> RequiredModules = new Dictionary<string,string>();
+        public string GetVersionInfo(){
 
-        /*
-        /// <summary>
-        /// Return all the javascript source code loaded with call to Require
-        /// </summary>
-        /// <returns></returns>
-        private string GetRequiredModuleCode(){
-
-            var b = new StringBuilder(1024);
-
-            foreach(var c in RequiredModules.Values)
-                b.Append(c).AppendLine();
-
-            return b.ToString();
-        }*/
+            return "JavaScrip runtime:{0}".format(_javaScriptContextImplementation.Runtime);
+        }
         /// <summary>
         /// Load a JavaScript text file or text ressource in the JavaScript context
         /// </summary>
-        /// <param name="name"></param>
-        public void Load(string name, Assembly a = null) {
+        /// <param name="name">The name without the .js extension</param>
+        /// <param name="assembly">The assembly is loading a ressource</param>
+        public void Load(string name, Assembly assembly = null) {
 
             if(!name.ToLower().EndsWith(".js"))
                 name += ".js";
 
             string code = null;
 
-            if(a!=null)
-                code = DynamicSugar.DS.Resources.GetTextResource(name, a);
+            if(assembly!=null)
+                code = DynamicSugar.DS.Resources.GetTextResource(name, assembly);
 
             if(System.IO.File.Exists(name))
                 code = System.IO.File.ReadAllText(name);
@@ -55,51 +44,50 @@ namespace DynamicJavaScriptRunTimes {
             this.Run(code);
         }
         /// <summary>
-        /// 
+        /// Execute a javascript global function or method
         /// </summary>
-        /// <param name="functionName"></param>
-        /// <param name="parameters"></param>
+        /// <param name="functionName">the function name</param>
+        /// <param name="parameters">The parameters</param>
         /// <returns></returns>
         public object Call(string functionName, params object[] parameters)
         {
             return _javaScriptContextImplementation.Call(functionName, parameters);
         }
         /// <summary>
-        /// Helper function to make date compatible with the used JavaScript
+        /// Helper function to make date compatible with the JavaScript
         /// run time. Jurassic date are not .net datetime and need a convertion
         /// </summary>
         /// <param name="o"></param>
         /// <returns></returns>
-        public object Date(object o){
+        public object Date(DateTime d){
 
-            return _javaScriptContextImplementation.Date(o);
+            return _javaScriptContextImplementation.Date(d);
         }
         /// <summary>
-        /// Helper function to make array compatible with the used JavaScript
-        /// run time.
+        /// Helper function to make array compatible with the JavaScript run time.
         /// </summary>
-        /// <param name="values"></param>
+        /// <param name="array"></param>
         /// <returns></returns>
-        public object Array(params object [] values){
+        public object Array(params object [] array){
 
-            object a = values;
-            return _javaScriptContextImplementation.Array(a);
+            return _javaScriptContextImplementation.Array(array);
         }
         /// <summary>
-        /// Helper function to make JavaScript object compatible with the used JavaScript
+        /// Helper function to make a JavaScript object compatible with the JavaScript run-time
         /// </summary>
-        /// <param name="o"></param>
+        /// <param name="netObject"></param>
         /// <returns></returns>
-        public object Object(object o){
+        public object Object(object netObject){
 
-            return _javaScriptContextImplementation.Object(o);
+            return _javaScriptContextImplementation.Object(netObject);
         }        
         /// <summary>
-        /// Run the script passed as parameter
+        /// Run the script and return the last value evaluated. Executing a declaration function 
+        /// or a global object literal, will load the function or object in the JavaScript context.
         /// </summary>
         /// <param name="script"></param>
-        /// <returns>Return the last expression evaluated. The value is converted
-        /// into a .NET array or a DynamicJavaScriptInstance</returns>
+        /// <returns>
+        /// </returns>
         public object Run(string script){
             
             var o = this._javaScriptContextImplementation.Run(script);
