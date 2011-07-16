@@ -1,25 +1,29 @@
-#-------------------------------------------------
-#
-class Person
+# Assignment:
+number   = 42
+opposite = true
 
-    constructor: (@LastName, @FirstName, @DateOfBirth) ->
+# Conditions:
+number = -42 if opposite
 
-    GetInfo:() ->
-        this.LastName + " " + this.FirstName + " " + this.DateOfBirth
+# Functions:
+square = (x) -> x * x
 
-    Titi: (p) ->
-        null
+# Arrays:
+list = [1, 2, 3, 4, 5]
 
-p = new Person("Torres","Fred","")
-alert(p.GetInfo())
+# Objects:
+math =
+  root:   Math.sqrt
+  square: square
+  cube:   (x) -> x * square x
 
-#-------------------------------------------------
-#
-class Employee extends Person
+# Splats:
+race = (winner, runners...) ->
+  print winner, runners
 
-    constructor: (lastName, firstName, dateOfBirth, @Company) ->
-        super(lastName, firstName, dateOfBirth)
+# Existence:
+alert "I knew it!" if elvis?
 
-e = new Employee("Torres","Fred","","ScerIS")
-alert(e.GetInfo())
-alert(e.Company)
+# Array comprehensions:
+cubes = (math.cube num for num in list)
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define JURASSIC
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,18 +12,23 @@ namespace CoffeeScriptRunTime {
         Compile,
         Run
     }
-    class CoffeeScriptRunTime {
+    public class CoffeeScriptRunTime {
 
         const string CoffeeScriptVersion  = "1.1.1";
         const string DisplayJavaScriptTag = "#!DisplayJavaScript";
         
         dynamic _jsContext;
         string  _coffeeScriptFileName;
+        string  _javaScriptFileName;
         bool    _displayJavaScriptFromCoffeeScript;
-        
+
         public CoffeeScriptRunTime(){
 
-            this._jsContext = new DynamicJavaScriptRunTimes.DynamicJavascriptContext(new Noesis.Javascript.JavascriptContext());
+            #if JURASSIC
+                this._jsContext = new DynamicJavaScriptRunTimes.DynamicJavascriptContext(new Jurassic.ScriptEngine());
+            #else
+                this._jsContext = new DynamicJavaScriptRunTimes.DynamicJavascriptContext(new Noesis.Javascript.JavascriptContext());
+            #endif
         }
         public string JavaScriptOutputfile{
             get{
@@ -31,7 +37,21 @@ namespace CoffeeScriptRunTime {
                 return @"{0}\{1}.js".format(d, n);
             }
         }
-        public bool Compile(string fileName, Action action, bool displayJavaScriptCode){
+
+        public bool RunJavaScript(string fileName){
+            
+            
+            this._javaScriptFileName   = fileName;
+            string javaScriptReady     = LoadAndPreprocessJavaScriptSource(fileName);
+            var finalJavaScript        = LoadJAVAScriptLibrariesForCompiling(javaScriptReady);
+            
+            var es = this.ExecuteJavaScript(finalJavaScript);
+            if(!es.Succeeded)
+                Console.WriteLine(es.ToString());
+
+            return true;
+        }
+        public CompilationStatus CompileAndOrRunCoffeeScript(string fileName, Action action, bool displayJavaScriptCode){
 
             this._coffeeScriptFileName = fileName;
             string coffeeScriptReady   = LoadAndPreprocessCoffeeScriptSource(fileName);
@@ -53,8 +73,15 @@ namespace CoffeeScriptRunTime {
             }
             else{
                 Console.WriteLine(compilationStatus.ToString());
-            }            
-            return true;
+            }
+            return compilationStatus;
+        }
+        private string LoadJAVAScriptLibrariesForCompiling(string script) {
+
+            var jsCode = new StringBuilder();            
+            jsCode.Append(DynamicSugar.DS.Resources.GetTextResource("RunTimeHelper.js", System.Reflection.Assembly.GetExecutingAssembly())).AppendLine();
+            jsCode.Append(script).AppendLine();
+            return jsCode.ToString();
         }
         private string LoadJavaScriptLibrariesForCompiling(string coffeeScriptCode) {
 
@@ -71,6 +98,11 @@ namespace CoffeeScriptRunTime {
             jsCode.Append(DynamicSugar.DS.Resources.GetTextResource("RunTimeHelper.js", System.Reflection.Assembly.GetExecutingAssembly())).AppendLine();
             jsCode.Append(javaScriptCode).AppendLine();
             return jsCode.ToString();
+        }
+        private string LoadAndPreprocessJavaScriptSource(string fileName) {
+
+            var javaScriptCode = System.IO.File.ReadAllText(fileName);
+            return javaScriptCode;
         }
         private string LoadAndPreprocessCoffeeScriptSource(string fileName) {
 
@@ -91,11 +123,13 @@ namespace CoffeeScriptRunTime {
 
                 Console.Write("CoffeeScript Run-time v 0.1, ");
                 Console.Write("CoffeeScript Compiler v {0}, ".format(CoffeeScriptVersion));
+                Console.Write("The Closure Compiler - Copyright 2009 Google - http://code.google.com/closure/compiler");
+
                 string v = _jsContext.GetVersionInfo();
                 Console.WriteLine("{0}.".format(v));
             }
         }
-        class CompilationStatus {
+        public class CompilationStatus {
 
             public System.Exception ex;
             public string javaScriptCode;
@@ -138,9 +172,13 @@ namespace CoffeeScriptRunTime {
         }
     }
 
-    class Program {
+    public class Program {
 
         static void Main(string[] args) {
+
+            __Main(args);
+        }
+        public static void __Main(string[] args, bool throwException = false) {
 
             CoffeeScriptRunTime cs = new CoffeeScriptRunTime();
 
@@ -152,18 +190,22 @@ How to execute a coffee script file
     CoffeeScriptRunTime.exe myfile.coffee
 How to create the corresponding javascript file from a coffee script file
     CoffeeScriptRunTime.exe myfile.coffee -compile
+How to execute a javascript script file
+    CoffeeScriptRunTime.exe myfile.js
+How to compile a javascript script file with Google Closure Compiler
+    CoffeeScriptRunTime.exe myfile.js -compile
 
-Others options
--pause - Wait for an enter key at the end
--nologo - Do do not display the logo
--displayJavacript - Display the JavaScript source created.
+Others options:
+-pause: Wait for an enter key at the end
+-nologo: Do do not display the logo
+-displayJavacript: -Display the JavaScript source created (CoffeeScript only)
 ");
             }
 
-            var displayLogo           = !Environment.CommandLine.Contains("-nologo");
-            var pause                 = Environment.CommandLine.Contains("-pause");
-            var displayJavaScriptCode = Environment.CommandLine.Contains("-displayJavacript");
-            var action                = Environment.CommandLine.Contains("-compile") ? Action.Compile : Action.Run;
+            var displayLogo           = !args.Contains("-nologo");
+            var pause                 =  args.Contains("-pause");
+            var displayJavaScriptCode =  args.Contains("-displayJavacript");
+            var action                =  args.Contains("-compile") ? Action.Compile : Action.Run;
 
             cs.DisplayLogo(displayLogo);
             
@@ -171,7 +213,26 @@ Others options
 
                 if((!p.StartsWith("-"))&&(System.IO.File.Exists(p))){
 
-                    cs.Compile(p, action, displayJavaScriptCode);
+                    if(System.IO.Path.GetExtension(p)==".coffee"){
+
+                        var status = cs.CompileAndOrRunCoffeeScript(p, action, displayJavaScriptCode);
+                        if (throwException && !status.Succeeded)
+                            throw new ApplicationException(status.ToString());
+                    }
+                    else if(System.IO.Path.GetExtension(p)==".js"){
+
+                        if(action==Action.Run){
+
+                            cs.RunJavaScript(p);
+                        }
+                        else if(action== Action.Compile) {
+
+                            ClosureCompiler closure = new ClosureCompiler();
+                            var status = closure.Compile(p);
+                            if (throwException && !status.Succeeded)
+                                throw new ApplicationException(status.ToString());
+                        }
+                    }
                 }
             }
             if(pause){

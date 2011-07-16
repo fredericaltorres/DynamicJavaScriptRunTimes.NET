@@ -17,7 +17,7 @@ namespace DynamicJavaScriptRunTimes {
 
         public string GetVersionInfo(){
 
-            return "JavaScrip runtime:{0}".format(_javaScriptContextImplementation.Runtime);
+            return "JavaScript runtime:{0}".format(_javaScriptContextImplementation.Runtime);
         }
         /// <summary>
         /// Load a JavaScript text file or text ressource in the JavaScript context

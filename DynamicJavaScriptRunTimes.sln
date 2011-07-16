@@ -18,6 +18,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeScriptRunTime", "Coff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JurassicConsole", "JurassicConsole\JurassicConsole.csproj", "{D7765541-3657-4788-B6E2-81CBDF72D140}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeParser", "CoffeeScriptRunTime\VSCoffeeScript\CoffeeLite\CoffeeParser\CoffeeParser.csproj", "{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeLite", "CoffeeScriptRunTime\VSCoffeeScript\CoffeeLite\CoffeeLite\CoffeeLite.csproj", "{B03E0173-346A-43B8-8E36-3630DF9C904B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeScriptRunnerVSPackage", "CoffeeScriptRunTime\CoffeeScriptRunnerVSPackage\CoffeeScriptRunnerVSPackage.csproj", "{677443C9-4DCC-4DAE-AC49-40A03D6486A9}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = DynamicJavaScriptRunTimes.vsmdi
@@ -81,6 +87,36 @@ Global
 		{D7765541-3657-4788-B6E2-81CBDF72D140}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D7765541-3657-4788-B6E2-81CBDF72D140}.Release|x86.ActiveCfg = Release|x86
 		{D7765541-3657-4788-B6E2-81CBDF72D140}.Release|x86.Build.0 = Release|x86
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A0BF6E7E-76FA-4315-A9A2-0F8FDD48D0EB}.Release|x86.ActiveCfg = Release|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B03E0173-346A-43B8-8E36-3630DF9C904B}.Release|x86.ActiveCfg = Release|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{677443C9-4DCC-4DAE-AC49-40A03D6486A9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

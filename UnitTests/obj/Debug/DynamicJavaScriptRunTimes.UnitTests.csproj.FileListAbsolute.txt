@@ -1,0 +1,11 @@
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\configuration.js
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\DynamicJavaScriptRunTimes.UnitTests.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\DynamicJavaScriptRunTimes.UnitTests.pdb
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\DynamicJavaScriptRunTimes.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\DynamicSugar.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\Jurassic.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\Noesis.Javascript.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\bin\Debug\DynamicJavaScriptRunTimes.pdb
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\obj\Debug\ResolveAssemblyReference.cache
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\obj\Debug\DynamicJavaScriptRunTimes.UnitTests.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\UnitTests\obj\Debug\DynamicJavaScriptRunTimes.UnitTests.pdb

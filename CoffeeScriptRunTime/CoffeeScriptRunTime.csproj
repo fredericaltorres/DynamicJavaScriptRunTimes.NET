@@ -53,8 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClosureCompiler\ClosureCompiler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="Util\Runner.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DynamicJavaScriptRunTimes.csproj">
@@ -85,11 +88,13 @@
     <None Include="CoffeeScripts\overview.coffee" />
     <None Include="CoffeeScripts\splat.coffee" />
     <None Include="CoffeeScripts\StringProcessing.coffee" />
-    <None Include="SyntaxHighLighter\CoffeeScript.chl" />
+    <None Include="Util\SyntaxHighLighter\CoffeeScript.chl" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CoffeeScripts\overview.coffee.js" />
+    <EmbeddedResource Include="ClosureCompiler\Java\compiler.jar" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

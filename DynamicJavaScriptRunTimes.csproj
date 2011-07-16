@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DynamicJavaScriptRunTimes.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DynamicSugar">
       <HintPath>packages\DynamicSugar.0.1.10.0\lib\DynamicSugar.dll</HintPath>
@@ -63,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DynamicJavaScriptRunTimes.snk" />
     <None Include="packages.config" />
     <None Include="Readme.markdown" />
   </ItemGroup>

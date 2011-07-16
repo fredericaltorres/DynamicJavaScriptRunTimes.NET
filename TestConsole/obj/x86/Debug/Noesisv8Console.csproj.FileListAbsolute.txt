@@ -1,0 +1,10 @@
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\bin\Debug\Noesisv8Console.exe
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\bin\Debug\Noesisv8Console.pdb
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\bin\Debug\DynamicJavaScriptRunTimes.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\bin\Debug\Jurassic.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\bin\Debug\Noesis.Javascript.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\bin\Debug\DynamicSugar.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\bin\Debug\DynamicJavaScriptRunTimes.pdb
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\obj\x86\Debug\Noesisv8Console.exe
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\TestConsole\obj\x86\Debug\Noesisv8Console.pdb

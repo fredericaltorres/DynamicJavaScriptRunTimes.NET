@@ -1,0 +1,10 @@
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\bin\Release\JurassicConsole.exe
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\bin\Release\JurassicConsole.pdb
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\bin\Release\DynamicJavaScriptRunTimes.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\bin\Release\Jurassic.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\bin\Release\Noesis.Javascript.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\bin\Release\DynamicSugar.dll
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\bin\Release\DynamicJavaScriptRunTimes.pdb
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\obj\x86\Release\ResolveAssemblyReference.cache
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\obj\x86\Release\JurassicConsole.exe
+C:\FredericTorres.Net.Src\JS\DynamicJavaScriptRunTime\JurassicConsole\obj\x86\Release\JurassicConsole.pdb

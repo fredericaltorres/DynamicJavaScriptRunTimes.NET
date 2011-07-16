@@ -1,9 +1,20 @@
 # CoffeeScript Demo
 #!DisplayJavaScript
-l = [ 1..1000 ]
+
+print("Hello World From CoffeeScript")
+
+l = [ 1..20 ]
 for i in l
     print(i)
 
-o = { a:1, b:2 }
+o = { 
+    a:1, 
+    b:2, 
+    c: (z) ->
+        return "val:"+z
+}
 for k,v of o
-    print(k+" "+v)
+    if typeof(v) != 'function'
+        print(k+" "+v)
+
+print(o["c"](1))

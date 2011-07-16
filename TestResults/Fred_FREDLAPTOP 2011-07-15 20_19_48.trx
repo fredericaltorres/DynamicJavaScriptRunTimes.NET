@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="0e2afa42-2393-4b2f-b88c-4190dd69a184" name="Fred@FREDLAPTOP 2011-07-15 20:19:48" runUser="FREDLAPTOP\Fred" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="6c6a148e-142e-4ab3-89cd-06757c85703c">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Fred_FREDLAPTOP 2011-07-15 20_19_48" />
+  </TestSettings>
+  <Times creation="2011-07-15T20:19:48.0625000-04:00" queuing="2011-07-15T20:19:51.4062500-04:00" start="2011-07-15T20:19:51.6562500-04:00" finish="2011-07-15T20:19:55.6093750-04:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="17" executed="17" passed="17" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="StringArray_InputOutput" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="a3ebb228-8237-4cd4-50cd-b6ca13d016e3">
+      <Execution id="d9e9bf07-2595-42af-9408-dba6dd192ebb" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StringArray_InputOutput" />
+    </UnitTest>
+    <UnitTest name="Objects_InputOutput" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="933aac1a-e837-5450-36e8-38bdc92fe6fb">
+      <Execution id="9509d6f0-1813-40cd-a8e3-50df630769c6" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Objects_InputOutput" />
+    </UnitTest>
+    <UnitTest name="CallingFunction" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="eb6416e4-746f-cd75-ebcb-7efce70052c7">
+      <Execution id="88e3f6a5-a7ff-429a-bd5f-b752fd9d6145" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CallingFunction" />
+    </UnitTest>
+    <UnitTest name="CreateAndReturnObjectOnTheFly" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="f273e1e2-8ad8-28de-55bc-7ebc8b163ccb">
+      <Execution id="d6883483-e91b-4d22-ac35-6cca23ebae2f" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateAndReturnObjectOnTheFly" />
+    </UnitTest>
+    <UnitTest name="Undefined" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="941795ba-6c50-554a-fc9d-e1093da24ea6">
+      <Execution id="d45edc1a-37be-42dd-ae35-4c0644061516" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Undefined" />
+    </UnitTest>
+    <UnitTest name="IntArray_InputOutput" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="cb7b3041-3fe5-9cfe-d3a5-e7335d52e1ba">
+      <Execution id="4f1836bd-3b08-4d1b-bc5a-6ca18c1bd2d2" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IntArray_InputOutput" />
+    </UnitTest>
+    <UnitTest name="Run_TestExpressionsReturned" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="48eda44e-bbfa-3750-4a0d-8f10f5dff00c">
+      <Execution id="3f64186b-d1d8-4fb2-8b89-03d617edc168" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Run_TestExpressionsReturned" />
+    </UnitTest>
+    <UnitTest name="ValueType_InputOutput_ArraySyntax" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="12c2f714-0cb3-402e-2296-1f296fc702e7">
+      <Execution id="72a5a5b4-cb25-4e1e-92cd-cf284aeac2c6" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ValueType_InputOutput_ArraySyntax" />
+    </UnitTest>
+    <UnitTest name="NoesisSampleFromCodeplexWebSite" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="b1371728-4903-380b-5bc7-e83c72808661">
+      <Execution id="506b44d9-6f07-4625-8fc8-225f073d314c" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.Samples, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NoesisSampleFromCodeplexWebSite" />
+    </UnitTest>
+    <UnitTest name="ReadingAConfiguration_NestedArrayOfObjectsLiteral" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="f35b9332-8989-0d75-ae91-0a147cd8939c">
+      <Execution id="558cc598-f42c-4aac-881b-59f72a0f101b" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadingAConfiguration_NestedArrayOfObjectsLiteral" />
+    </UnitTest>
+    <UnitTest name="ValueType_InputOutput_PropertySyntax" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="30e39ea6-0a65-4df7-b821-940548253d09">
+      <Execution id="67a4998b-55e2-4469-97ec-5e91e8657133" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ValueType_InputOutput_PropertySyntax" />
+    </UnitTest>
+    <UnitTest name="ArraySample" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="b76cdb81-54e0-4fe4-f244-0f27432793df">
+      <Execution id="99b53c38-5dea-4afd-9d6e-4a9f104634b0" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.Samples, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ArraySample" />
+    </UnitTest>
+    <UnitTest name="NestedObjects_NestedInputObject_Output" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="d7ea49c8-db13-022b-5d28-9112689c9d51">
+      <Execution id="f37d2f3c-32ac-4e20-8a1a-330f98459f15" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NestedObjects_NestedInputObject_Output" />
+    </UnitTest>
+    <UnitTest name="CallingFunctions" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="74059d1a-6109-98b3-ae55-2e9f79f3e7e3">
+      <Execution id="cd8d1774-2531-4cfd-a6d8-bf4bc9d04267" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.Samples, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CallingFunctions" />
+    </UnitTest>
+    <UnitTest name="MultiTypeArray_InputOutput" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="66374c18-dcac-a834-602e-97b323b3b2db">
+      <Execution id="de3f5f98-4359-4ae1-ad66-19ea5a99d80d" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MultiTypeArray_InputOutput" />
+    </UnitTest>
+    <UnitTest name="ReadingAConfiguration" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="fdf3c5fa-eec9-f37b-ac11-33d4d6dd9d2d">
+      <Execution id="f2768174-91cc-4aa1-a254-fd5f3dc0dbd0" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.Samples, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadingAConfiguration" />
+    </UnitTest>
+    <UnitTest name="Objects_InputObjectNested_Output" storage=".\unittests\bin\debug\dynamicjavascriptruntimes.unittests.dll" id="5b90562e-a4d5-f3e5-a1f5-1d2c86cde8cf">
+      <Execution id="ed3d8c7e-db3a-4282-a6e8-4d182033b43d" />
+      <TestMethod codeBase="C:/FredericTorres.Net.Src/JS/DynamicJavaScriptRunTime/UnitTests/bin/Debug/DynamicJavaScriptRunTimes.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DynamicJavaScriptRunTimes.UnitTests.UnitTests, DynamicJavaScriptRunTimes.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Objects_InputObjectNested_Output" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b76cdb81-54e0-4fe4-f244-0f27432793df" executionId="99b53c38-5dea-4afd-9d6e-4a9f104634b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74059d1a-6109-98b3-ae55-2e9f79f3e7e3" executionId="cd8d1774-2531-4cfd-a6d8-bf4bc9d04267" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b1371728-4903-380b-5bc7-e83c72808661" executionId="506b44d9-6f07-4625-8fc8-225f073d314c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fdf3c5fa-eec9-f37b-ac11-33d4d6dd9d2d" executionId="f2768174-91cc-4aa1-a254-fd5f3dc0dbd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb6416e4-746f-cd75-ebcb-7efce70052c7" executionId="88e3f6a5-a7ff-429a-bd5f-b752fd9d6145" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f273e1e2-8ad8-28de-55bc-7ebc8b163ccb" executionId="d6883483-e91b-4d22-ac35-6cca23ebae2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb7b3041-3fe5-9cfe-d3a5-e7335d52e1ba" executionId="4f1836bd-3b08-4d1b-bc5a-6ca18c1bd2d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66374c18-dcac-a834-602e-97b323b3b2db" executionId="de3f5f98-4359-4ae1-ad66-19ea5a99d80d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7ea49c8-db13-022b-5d28-9112689c9d51" executionId="f37d2f3c-32ac-4e20-8a1a-330f98459f15" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b90562e-a4d5-f3e5-a1f5-1d2c86cde8cf" executionId="ed3d8c7e-db3a-4282-a6e8-4d182033b43d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="933aac1a-e837-5450-36e8-38bdc92fe6fb" executionId="9509d6f0-1813-40cd-a8e3-50df630769c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f35b9332-8989-0d75-ae91-0a147cd8939c" executionId="558cc598-f42c-4aac-881b-59f72a0f101b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48eda44e-bbfa-3750-4a0d-8f10f5dff00c" executionId="3f64186b-d1d8-4fb2-8b89-03d617edc168" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3ebb228-8237-4cd4-50cd-b6ca13d016e3" executionId="d9e9bf07-2595-42af-9408-dba6dd192ebb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="941795ba-6c50-554a-fc9d-e1093da24ea6" executionId="d45edc1a-37be-42dd-ae35-4c0644061516" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12c2f714-0cb3-402e-2296-1f296fc702e7" executionId="72a5a5b4-cb25-4e1e-92cd-cf284aeac2c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="30e39ea6-0a65-4df7-b821-940548253d09" executionId="67a4998b-55e2-4469-97ec-5e91e8657133" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="99b53c38-5dea-4afd-9d6e-4a9f104634b0" testId="b76cdb81-54e0-4fe4-f244-0f27432793df" testName="ArraySample" computerName="FREDLAPTOP" duration="00:00:01.0146314" startTime="2011-07-15T20:19:51.7968750-04:00" endTime="2011-07-15T20:19:53.8125000-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99b53c38-5dea-4afd-9d6e-4a9f104634b0">
+    </UnitTestResult>
+    <UnitTestResult executionId="cd8d1774-2531-4cfd-a6d8-bf4bc9d04267" testId="74059d1a-6109-98b3-ae55-2e9f79f3e7e3" testName="CallingFunctions" computerName="FREDLAPTOP" duration="00:00:00.1031625" startTime="2011-07-15T20:19:53.8281250-04:00" endTime="2011-07-15T20:19:53.9375000-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd8d1774-2531-4cfd-a6d8-bf4bc9d04267">
+    </UnitTestResult>
+    <UnitTestResult executionId="506b44d9-6f07-4625-8fc8-225f073d314c" testId="b1371728-4903-380b-5bc7-e83c72808661" testName="NoesisSampleFromCodeplexWebSite" computerName="FREDLAPTOP" duration="00:00:00.0874491" startTime="2011-07-15T20:19:53.9531250-04:00" endTime="2011-07-15T20:19:54.0468750-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="506b44d9-6f07-4625-8fc8-225f073d314c">
+      <Output>
+        <StdOut>Hello World ! (0)
+Hello World ! (1)
+Hello World ! (2)
+Hello World ! (3)
+Hello World ! (4)
+number: 6</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f2768174-91cc-4aa1-a254-fd5f3dc0dbd0" testId="fdf3c5fa-eec9-f37b-ac11-33d4d6dd9d2d" testName="ReadingAConfiguration" computerName="FREDLAPTOP" duration="00:00:00.0508204" startTime="2011-07-15T20:19:54.0468750-04:00" endTime="2011-07-15T20:19:54.1093750-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2768174-91cc-4aa1-a254-fd5f3dc0dbd0">
+    </UnitTestResult>
+    <UnitTestResult executionId="88e3f6a5-a7ff-429a-bd5f-b752fd9d6145" testId="eb6416e4-746f-cd75-ebcb-7efce70052c7" testName="CallingFunction" computerName="FREDLAPTOP" duration="00:00:00.6030154" startTime="2011-07-15T20:19:54.1093750-04:00" endTime="2011-07-15T20:19:54.7187500-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88e3f6a5-a7ff-429a-bd5f-b752fd9d6145">
+    </UnitTestResult>
+    <UnitTestResult executionId="d6883483-e91b-4d22-ac35-6cca23ebae2f" testId="f273e1e2-8ad8-28de-55bc-7ebc8b163ccb" testName="CreateAndReturnObjectOnTheFly" computerName="FREDLAPTOP" duration="00:00:00.0289947" startTime="2011-07-15T20:19:54.7187500-04:00" endTime="2011-07-15T20:19:54.7656250-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6883483-e91b-4d22-ac35-6cca23ebae2f">
+    </UnitTestResult>
+    <UnitTestResult executionId="4f1836bd-3b08-4d1b-bc5a-6ca18c1bd2d2" testId="cb7b3041-3fe5-9cfe-d3a5-e7335d52e1ba" testName="IntArray_InputOutput" computerName="FREDLAPTOP" duration="00:00:00.0745153" startTime="2011-07-15T20:19:54.7656250-04:00" endTime="2011-07-15T20:19:54.8437500-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f1836bd-3b08-4d1b-bc5a-6ca18c1bd2d2">
+    </UnitTestResult>
+    <UnitTestResult executionId="de3f5f98-4359-4ae1-ad66-19ea5a99d80d" testId="66374c18-dcac-a834-602e-97b323b3b2db" testName="MultiTypeArray_InputOutput" computerName="FREDLAPTOP" duration="00:00:00.0616173" startTime="2011-07-15T20:19:54.8437500-04:00" endTime="2011-07-15T20:19:54.9062500-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de3f5f98-4359-4ae1-ad66-19ea5a99d80d">
+    </UnitTestResult>
+    <UnitTestResult executionId="f37d2f3c-32ac-4e20-8a1a-330f98459f15" testId="d7ea49c8-db13-022b-5d28-9112689c9d51" testName="NestedObjects_NestedInputObject_Output" computerName="FREDLAPTOP" duration="00:00:00.0753651" startTime="2011-07-15T20:19:54.9062500-04:00" endTime="2011-07-15T20:19:54.9843750-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f37d2f3c-32ac-4e20-8a1a-330f98459f15">
+    </UnitTestResult>
+    <UnitTestResult executionId="ed3d8c7e-db3a-4282-a6e8-4d182033b43d" testId="5b90562e-a4d5-f3e5-a1f5-1d2c86cde8cf" testName="Objects_InputObjectNested_Output" computerName="FREDLAPTOP" duration="00:00:00.0468263" startTime="2011-07-15T20:19:55.0000000-04:00" endTime="2011-07-15T20:19:55.0468750-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed3d8c7e-db3a-4282-a6e8-4d182033b43d">
+    </UnitTestResult>
+    <UnitTestResult executionId="9509d6f0-1813-40cd-a8e3-50df630769c6" testId="933aac1a-e837-5450-36e8-38bdc92fe6fb" testName="Objects_InputOutput" computerName="FREDLAPTOP" duration="00:00:00.0859438" startTime="2011-07-15T20:19:55.0468750-04:00" endTime="2011-07-15T20:19:55.1406250-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9509d6f0-1813-40cd-a8e3-50df630769c6">
+    </UnitTestResult>
+    <UnitTestResult executionId="558cc598-f42c-4aac-881b-59f72a0f101b" testId="f35b9332-8989-0d75-ae91-0a147cd8939c" testName="ReadingAConfiguration_NestedArrayOfObjectsLiteral" computerName="FREDLAPTOP" duration="00:00:00.0653963" startTime="2011-07-15T20:19:55.1406250-04:00" endTime="2011-07-15T20:19:55.2031250-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="558cc598-f42c-4aac-881b-59f72a0f101b">
+    </UnitTestResult>
+    <UnitTestResult executionId="3f64186b-d1d8-4fb2-8b89-03d617edc168" testId="48eda44e-bbfa-3750-4a0d-8f10f5dff00c" testName="Run_TestExpressionsReturned" computerName="FREDLAPTOP" duration="00:00:00.0377659" startTime="2011-07-15T20:19:55.2187500-04:00" endTime="2011-07-15T20:19:55.2500000-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f64186b-d1d8-4fb2-8b89-03d617edc168">
+    </UnitTestResult>
+    <UnitTestResult executionId="d9e9bf07-2595-42af-9408-dba6dd192ebb" testId="a3ebb228-8237-4cd4-50cd-b6ca13d016e3" testName="StringArray_InputOutput" computerName="FREDLAPTOP" duration="00:00:00.0349790" startTime="2011-07-15T20:19:55.2656250-04:00" endTime="2011-07-15T20:19:55.2968750-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9e9bf07-2595-42af-9408-dba6dd192ebb">
+    </UnitTestResult>
+    <UnitTestResult executionId="d45edc1a-37be-42dd-ae35-4c0644061516" testId="941795ba-6c50-554a-fc9d-e1093da24ea6" testName="Undefined" computerName="FREDLAPTOP" duration="00:00:00.0269998" startTime="2011-07-15T20:19:55.2968750-04:00" endTime="2011-07-15T20:19:55.3281250-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d45edc1a-37be-42dd-ae35-4c0644061516">
+    </UnitTestResult>
+    <UnitTestResult executionId="72a5a5b4-cb25-4e1e-92cd-cf284aeac2c6" testId="12c2f714-0cb3-402e-2296-1f296fc702e7" testName="ValueType_InputOutput_ArraySyntax" computerName="FREDLAPTOP" duration="00:00:00.0603481" startTime="2011-07-15T20:19:55.3281250-04:00" endTime="2011-07-15T20:19:55.4062500-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72a5a5b4-cb25-4e1e-92cd-cf284aeac2c6">
+    </UnitTestResult>
+    <UnitTestResult executionId="67a4998b-55e2-4469-97ec-5e91e8657133" testId="30e39ea6-0a65-4df7-b821-940548253d09" testName="ValueType_InputOutput_PropertySyntax" computerName="FREDLAPTOP" duration="00:00:00.1575700" startTime="2011-07-15T20:19:55.4062500-04:00" endTime="2011-07-15T20:19:55.5781250-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67a4998b-55e2-4469-97ec-5e91e8657133">
+    </UnitTestResult>
+  </Results>
+</TestRun>
